@@ -1,7 +1,7 @@
 # Peptide-Aldol-Reaction
 
 <div align="center">
-    <img src='https://github.com/troy-lcy/HTE-Aldol-Peptides/blob/main/Figures/TOC.png' style="width:600px; height:600px; object-fit:cover;">
+    <img src='https://github.com/troy-lcy/HTE-Aldol-Peptides/blob/main/Figures/TOC.png' style="width:600px; height:400px; object-fit:cover;">
 </div>
 
 ### Highlights
@@ -13,6 +13,6 @@ In this work, we propose a novel framework that utilizes a pre-trained molecular
 ### Comparing with other molecular descriptor methods
 
 <div align="center">
-    <img src='https://github.com/troy-lcy/HTE-Aldol-Peptides/blob/main/Figures/Fig1.png' style="width:800px; height:1000px; object-fit:cover;">
+    <img src='https://github.com/troy-lcy/HTE-Aldol-Peptides/blob/main/Figures/Fig1.png' style="width:800px; height:600px; object-fit:cover;">
 </div>
 
