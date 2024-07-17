@@ -1,7 +1,7 @@
 # Peptide-Aldol-Reaction
 
 <div align="center">
-    <img src='https://github.com/troy-lcy/HTE-Aldol-Peptides/blob/main/Figures/TOC.png' style="width:600px; height:400px; object-fit:cover;">
+    <img src='https://github.com/troy-lcy/HTE-Aldol-Peptides/blob/main/Figures/TOC.png' style="width:600px">
 </div>
 
 ### Highlights
