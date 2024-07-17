@@ -1,4 +1,0 @@
-2024-03-11 21:33:47 | unimol_tools/models/unimol.py | 146 | INFO | Uni-Mol(QSAR) | Loading pretrained weights from /home/troy/miniconda3/envs/unimol-tool/lib/python3.9/site-packages/unimol_tools-1.0.0-py3.9.egg/unimol_tools/weights/mol_pre_all_h_220816.pt
-2024-03-11 21:33:48 | unimol_tools/data/conformer.py | 90 | INFO | Uni-Mol(QSAR) | Start generating conformers...
-2024-03-11 21:34:00 | unimol_tools/data/conformer.py | 94 | INFO | Uni-Mol(QSAR) | Failed to generate conformers for 0.00% of molecules.
-2024-03-11 21:34:00 | unimol_tools/data/conformer.py | 96 | INFO | Uni-Mol(QSAR) | Failed to generate 3d conformers for 0.00% of molecules.
