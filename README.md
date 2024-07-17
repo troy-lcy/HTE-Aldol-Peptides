@@ -23,4 +23,4 @@ To install `Uni-Mol` related tools, please refer to:
 [Uni-Mol Link](https://github.com/deepmodeling/Uni-Mol)
 
 Other required packages includes: 
-Sklearn, Matplotlib, [UMAP](https://umap-learn.readthedocs.io/en/latest/)
+[Sklearn](https://github.com/scikit-learn/scikit-learn), [Matplotlib](https://github.com/matplotlib/matplotlib), [UMAP](https://umap-learn.readthedocs.io/en/latest/)
