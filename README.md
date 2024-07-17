@@ -22,5 +22,14 @@ Python>3.8 is recommanded.
 To install `Uni-Mol` related tools, please refer to:
 [Uni-Mol Link](https://github.com/deepmodeling/Uni-Mol)
 
+@inproceedings{
+  zhou2023unimol,
+  title={Uni-Mol: A Universal 3D Molecular Representation Learning Framework},
+  author={Gengmo Zhou and Zhifeng Gao and Qiankun Ding and Hang Zheng and Hongteng Xu and Zhewei Wei and Linfeng Zhang and Guolin Ke},
+  booktitle={The Eleventh International Conference on Learning Representations },
+  year={2023},
+  url={https://openreview.net/forum?id=6K2RM6wVqKu}
+}
+
 Other required packages includes: 
 [Sklearn](https://github.com/scikit-learn/scikit-learn), [Matplotlib](https://github.com/matplotlib/matplotlib), [UMAP](https://umap-learn.readthedocs.io/en/latest/)
