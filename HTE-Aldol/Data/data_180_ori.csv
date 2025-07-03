@@ -1,4 +1,4 @@
-,Peptide,pep_smiles,Solvent,Sol_smi,ee,yields,yields_lable
+,Peptide,pep_smiles,Solvent,Sol_smi,ee,yields,yields_label
 0,GPLL,CC(C)C[C@H](NC(=O)[C@H](CC(C)C)NC(=O)[C@@H]1CCCN1C(=O)CN)C(=O)O,MeCN,CC#N,58.1,18.2,low
 1,GPLL,CC(C)C[C@H](NC(=O)[C@H](CC(C)C)NC(=O)[C@@H]1CCCN1C(=O)CN)C(=O)O,MeOH,CO,64.2,10,low
 2,GPLL,CC(C)C[C@H](NC(=O)[C@H](CC(C)C)NC(=O)[C@@H]1CCCN1C(=O)CN)C(=O)O,iPrOH,CC(C)O,37.2,19.9,low

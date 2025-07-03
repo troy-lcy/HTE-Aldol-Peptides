@@ -106,32 +106,33 @@ def plot_models(predictions,
                           'Linear Regression',
                           'Support Vector Machine',
                           'k-Nearest Neighbors',
+                          'MLPRegressor',
                           'Random Forest',
-                          'Neural Network'
-                        #   'MLPRegressor'
+                        #   'Neural Network'
                         ],
                 positions=[231,232,233,234,235,236],
                 # colors = [1,2,3,4,5,6],
                 save=False):
 
     fig = plt.figure(figsize=(15,10))
-    for pos, pred, r2, rmse, title ,color in zip(positions,
+    for pos, pred, r2, rmse, title  in zip(positions, # ,color
                                           predictions,
                                           r2_values,
                                           rmse_values,
                                           titles,
-                                          colors):
+                                          #colors
+                                          ):
         # create subplot
         plt.subplot(pos)
         plt.grid(alpha=0.2)
         plt.title(title, fontsize=15)
-        colors=list(mcolors.TABLEAU_COLORS.keys())
+        # colors=list(mcolors.TABLEAU_COLORS.keys())
         # add score patches
-        r2_patch = mpatches.Patch(label="R2 = {:04.2f}".format(r2),color=mcolors.TABLEAU_COLORS[colors[color]])
-        rmse_patch = mpatches.Patch(label="RMSE = {:4.2f}".format(rmse),color=mcolors.TABLEAU_COLORS[colors[color]])
+        r2_patch = mpatches.Patch(label="R2 = {:04.2f}".format(r2)) # ,color=mcolors.TABLEAU_COLORS[colors[color]]
+        rmse_patch = mpatches.Patch(label="RMSE = {:4.2f}".format(rmse)) # ,color=mcolors.TABLEAU_COLORS[colors[color]]
         # plt.xlim(-40,130)
         # plt.ylim(-10,130)
-        plt.scatter(pred, y_test, alpha=0.2,color=mcolors.TABLEAU_COLORS[colors[color]])
+        plt.scatter(pred, y_test, alpha=0.2,) # color=mcolors.TABLEAU_COLORS[colors[color]]
         plt.legend(handles=[r2_patch, rmse_patch], fontsize=12,loc='upper left')
         plt.plot(np.arange(-1,5), np.arange(-1,5), ls="--", c=".3")
         fig.text(0.5, 0.07, 'predicted deltaG%', ha='center', va='center', fontsize=15)
