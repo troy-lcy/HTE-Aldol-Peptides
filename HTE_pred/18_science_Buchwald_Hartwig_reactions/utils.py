@@ -9,11 +9,9 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, r2_score
 from torch.autograd import Variable
 import torch
-# # Import rpy2 to use R
-# from rpy2.robjects import r, pandas2ri
-# import rpy2.robjects as robjects
-# pandas2ri.activate()
-# readRDS = robjects.r['readRDS']
+import torch.nn as nn
+import torch.optim as optim
+
 
 def fit_models(X_train, 
                X_test,
@@ -192,3 +190,48 @@ def plot_models_Sun(predictions,
             plt.savefig('show_precision.jpg')
     else:
         plt.show()
+        
+class MLPRegressor(nn.Module):    
+    def __init__(self, input_dim, hidden_dim=512, num_layers=3, dropout=0.1):
+        super().__init__()
+        self.input_layer = nn.Linear(input_dim, hidden_dim)
+        self.hidden_layers = nn.ModuleList([
+            nn.Sequential(
+                nn.Linear(hidden_dim, hidden_dim),
+                nn.BatchNorm1d(hidden_dim),
+                nn.ReLU(),
+                nn.Dropout(dropout),
+            )
+            for _ in range(num_layers)
+        ])
+        self.output_layer = nn.Linear(hidden_dim, 1)  # 产率为标量
+
+    def forward(self, x):
+        x = self.input_layer(x)
+        for layer in self.hidden_layers:
+            x = layer(x)
+        x = self.output_layer(x)
+        return x
+
+# 训练函数
+def train_model(model, train_loader, optimizer, criterion, device):
+    model.train()
+    for xb, yb in train_loader:
+        xb, yb = xb.to(device), yb.to(device)
+        optimizer.zero_grad()
+        pred = model(xb).squeeze()
+        loss = criterion(pred, yb)
+        loss.backward()
+        optimizer.step()
+
+# 评估函数
+def evaluate_model(model, test_loader, device):
+    model.eval()
+    preds, targets = [], []
+    with torch.no_grad():
+        for xb, yb in test_loader:
+            xb = xb.to(device)
+            pred = model(xb).squeeze().cpu().numpy()
+            preds.extend(pred)
+            targets.extend(yb.numpy())
+    return np.array(preds), np.array(targets)
